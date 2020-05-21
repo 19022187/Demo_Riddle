@@ -2,6 +2,7 @@ package sg.edu.rp.c346.id19022187.demoriddle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -16,5 +17,9 @@ public class AnswerActivity1 extends AppCompatActivity {
 
         tvAnswer= findViewById(R.id.textView);
         tvAnswer.setText("In Second Activity");
+
+        Intent intent = getIntent();
+        String qSelected = intent.getStringExtra("Question");
+        tvAnswer.setText(qSelected);
     }
 }
