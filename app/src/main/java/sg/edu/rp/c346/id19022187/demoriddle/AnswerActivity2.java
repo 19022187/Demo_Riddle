@@ -8,18 +8,18 @@ import android.widget.TextView;
 
 public class AnswerActivity2 extends AppCompatActivity {
 
-    TextView tvAnswer;
+    TextView tvAns;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_answer2);
 
-        tvAnswer= findViewById(R.id.textView);
-        tvAnswer.setText("In Third Activity");
+        tvAns= findViewById(R.id.textView2);
+        tvAns.setText("In Third Activity");
 
         Intent intent = getIntent();
         String qSelected = intent.getStringExtra("Question2");
-        tvAnswer.setText(qSelected + " answer is: Gone");
+        tvAns.setText(qSelected + " answer is: Gone");
     }
 }
